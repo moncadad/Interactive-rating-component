@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL:](https://your-solution-url.com)
-- [Live Site URL:](https://your-live-site-url.com)
+- [Solution URL](https://your-solution-url.com)
+- [Live Site URL](https://comforting-wisp-184696.netlify.app/)
 
 ## My process
 
