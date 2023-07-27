@@ -50,13 +50,11 @@ Users should be able to:
 
 This project was definetly a challenge, with recently having had learned about React I decided to incorporate that within this project. In previous projects I had mostly focused using components. However in this project I made use of props as well as usestate. I'm nowhere near becoming a react expert as of now, but I must say it did teach me alot on how where and when to make best use out of it.
 
-```css
+css -
   I still fins pseudo selectors to be a pain so hopefully I used them properly here.
-```
 
-```js
- The useState and passing down functions and values as props, proud moment there.
-```
+js -
+ The useState and passing down functions and values as props, proud moment there. 
 
 ### Continued development
 
