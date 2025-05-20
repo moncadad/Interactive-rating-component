@@ -42,33 +42,33 @@ body {
   margin: 0 1.5rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
-  max-width: 412px;
+  max-width: 26rem;
 }
 
 /* Ratings Card */
 #rate.card .card__logo {
   background-color: var(--medium-grey);
   border-radius: 50%;
-  padding: 12px;
-  margin-bottom: 24px;
+  padding: 0.75;
+  margin-bottom: 1.5rem;
 }
 
 #rate.card .card__heading {
   font-weight: bold;
   line-height: 0;
-  font-size: clamp(24px, 5vw, 28px);
-  padding-bottom: 24px;
+  font-size: clamp(1.5rem, 5vw, 1.75rem);
+  padding-bottom: 1.5rem;
 }
 
 #rate.card .card__text {
   color: var(--light-grey);
-  font-size: clamp(14px, 5vw, 15px);
+  font-size: clamp(0.875rem, 5vw, 0.9rem);
   line-height: 1.5;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 #rate.card .card__ratings {
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -111,7 +111,7 @@ button,
   padding: 1em;
   border-radius: 1.5em;
   letter-spacing: 0.3em;
-  height: 46px;
+  height: 3em;
 }
 
 button:hover,
@@ -124,7 +124,7 @@ button:hover,
 }
 
 /* Response Card */
-#response.card {
+.response__card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,61 +132,61 @@ button:hover,
   /* padding-block: 24px 32px; */
 }
 
-#response.card .card__img {
+.response__card .card__img {
   margin-bottom: 1.5rem;
 }
 
-#response.card .card__rate--selected {
+.response__card .card__rate--selected {
   background-color: var(--medium-grey);
   color: var(--orange);
-  padding: 8px 24px;
-  border-radius: 16px;
-  margin-bottom: 24px;
-  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
-#response.card .card__heading {
+.response__card .card__heading {
   color: var(--white);
   font-weight: 700;
   margin-bottom: 1.5rem;
-  font-size: clamp(24px, 3.5vw, 28px);
+  font-size: clamp(1.5rem, 3.5vw, 1.75rem);
 }
 
-#response.card .card__text {
+.response__card .card__text {
   color: var(--light-grey);
-  font-size: clamp(14px, 3.5vw, 16px);
+  font-size: clamp(0.875rem, 3.5vw, 0.9rem);
   line-height: 1.5;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 /* Responsive Styling  */
 @media screen and (min-width: 650px) {
   .container {
-    padding: 32px;
+    padding: 2rem;
   }
 
-  #rate.card .card__logo {
-    margin-bottom: 40px;
-    padding: 16px;
-    height: 50px;
-    width: 50px;
+  .rate__card .card__logo {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    height: 3rem;
+    width: 3rem;
   }
-  #rate.card .card__heading,
-  #rate.card .card__text {
-    padding-bottom: 24px;
-  }
-
-  .card__text {
-    font-size: 16px;
-    line-height: 26px;
-  }
-  #rate.card .card__ratings {
-    padding-bottom: 32px;
+  .rate__card .card__heading,
+  .rate__card .card__text {
+    padding-bottom: 1.5rem;
   }
 
-  .card__ratings .rating__wrapper {
-    height: 50px;
-    width: 50px;
+  .rate__card .card__text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+  .rate__card .card__ratings {
+    padding-bottom: 2rem;
+  }
+
+  .rate.card .card__ratings .rating__wrapper {
+    height: 3rem;
+    width: 3rem;
   }
 }

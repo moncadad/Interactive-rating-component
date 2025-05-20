@@ -1,7 +1,7 @@
 import React from "react";
 export default function Response(props) {
   return (
-    <div className="card" id="response">
+    <div className="card response__card" id="response">
       <img
         className="card__img"
         src="/assets/illustration-thank-you.svg"

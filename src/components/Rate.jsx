@@ -1,6 +1,6 @@
 export default function Rate(props) {
   return (
-    <div className="card" id="rate">
+    <div className="card rate__card" id="rate">
       {/* <figure className="circle"> */}
       <img
         className=" card__logo"
