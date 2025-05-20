@@ -1,12 +1,13 @@
-export default function Thank(props) {
+import React from "react";
+export default function Response(props) {
   return (
-    <div className="ty-container card" id="response">
+    <div className="card" id="response">
       <img
-        className="image card__img"
+        className="card__img"
         src="/assets/illustration-thank-you.svg"
         alt="Figure of a mobile device"
       />
-      <p className="rated card__rate-selection">
+      <p className="rated card__rate--selected">
         You selected {props.rated} out of 5
       </p>
       <h1 className="prompt card__heading">Thank You!</h1>

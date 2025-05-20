@@ -1,6 +1,8 @@
 import "./App.css";
 import Rate from "./components/Rate";
-import Thank from "./components/Thank";
+// import Thank from "./components/Thank";
+import Response from "./components/Response";
+
 import { useState } from "react";
 
 function App() {
@@ -8,9 +10,9 @@ function App() {
   const [updateRate, setUpdateRate] = useState(0);
 
   const circleRating = rate.map((num) => (
-    <span className="circle" key={num} onClick={() => handleClick(num)}>
+    <li className="rating__wrapper" key={num} onClick={() => handleClick(num)}>
       {num}
-    </span>
+    </li>
   ));
 
   const handleClick = (num) => {
@@ -27,10 +29,10 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <main className="container">
       {show && <Rate circleRating={circleRating} showRating={showRating} />}
-      {!show && <Thank rated={updateRate} />}
-    </div>
+      {!show && <Response rated={updateRate} />}
+    </main>
   );
 }
 

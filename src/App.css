@@ -17,12 +17,16 @@
 }
 
 /* ## Layout: - Mobile: 375px, - Desktop: 1440px */
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+img {
+  max-width: 100%;
+}
 body {
   background-color: var(--very-dark-blue);
   color: var(--white);
@@ -35,40 +39,45 @@ body {
 }
 .container {
   background-color: var(--dark-blue);
-  margin: 1.5rem;
+  margin: 0 1.5rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
-  max-width: 340px;
-}
-.rate-container > .circle h1,
-p,
-.ratings {
-  margin-bottom: 1.25rem;
+  max-width: 412px;
 }
 
-img {
-  max-width: 100%;
+/* Ratings Card */
+#rate.card .card__logo {
+  background-color: var(--medium-grey);
+  border-radius: 50%;
+  padding: 12px;
+  margin-bottom: 24px;
 }
 
-h1,
-button {
-  color: var(--white);
+#rate.card .card__heading {
+  font-weight: bold;
+  line-height: 0;
+  font-size: clamp(24px, 5vw, 28px);
+  padding-bottom: 24px;
 }
-h2 {
-  color: orange;
-}
-p {
+
+#rate.card .card__text {
   color: var(--light-grey);
-  font-size: 14px;
+  font-size: clamp(14px, 5vw, 15px);
   line-height: 1.5;
+  padding-bottom: 24px;
 }
-button {
-  background-color: var(--orange);
-  font-weight: 700;
-  outline: none;
-  border: none;
+
+#rate.card .card__ratings {
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--light-grey);
+  list-style: none;
 }
-.circle {
+
+/* individual ratings 1- 5 */
+.rating__wrapper {
   background-color: var(--medium-grey);
   font-weight: 700;
   width: 2.5rem;
@@ -79,54 +88,105 @@ button {
   align-items: center;
 }
 
-.ratings {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: var(--light-grey);
-}
-.ratings .circle:hover {
+.card__ratings .rating__wrapper:hover {
   background-color: var(--orange);
   color: var(--white);
   cursor: pointer;
 }
-.ratings .circle:focus,
-.ratings .circle:active {
+.card__ratings .rating__wrapper:focus,
+.card__ratings .rating__wrapper:active {
   background-color: var(--light-grey);
+  color: var(--very-dark-blue);
 }
 
-button {
+/* action: submit buttons */
+button,
+#submitButton {
+  color: var(--white);
+  background-color: var(--orange);
+  font-weight: 700;
+  outline: none;
+  border: none;
   width: 100%;
   padding: 1em;
   border-radius: 1.5em;
   letter-spacing: 0.3em;
+  height: 46px;
 }
 
-button:hover {
+button:hover,
+#submitButton:hover,
+#submitButton:focus,
+#submitButton:active {
   background-color: var(--white);
-  color: var(--orange);
+  color: var(--very-dark-blue);
   cursor: pointer;
 }
 
-.ty-container {
+/* Response Card */
+#response.card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  /* padding-block: 24px 32px; */
 }
 
-.ty-container > img {
-  margin-bottom: 1.6rem;
+#response.card .card__img {
+  margin-bottom: 1.5rem;
 }
 
-.ty-container h1 {
+#response.card .card__rate--selected {
+  background-color: var(--medium-grey);
+  color: var(--orange);
+  padding: 8px 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#response.card .card__heading {
   color: var(--white);
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(24px, 3.5vw, 28px);
 }
 
-.ty-container > .rated {
-  background-color: var(--medium-grey);
-  padding: 0.4rem 0.68rem;
-  border-radius: 1rem;
+#response.card .card__text {
+  color: var(--light-grey);
+  font-size: clamp(14px, 3.5vw, 16px);
+  line-height: 1.5;
+  padding-bottom: 24px;
+}
+
+/* Responsive Styling  */
+@media screen and (min-width: 650px) {
+  .container {
+    padding: 32px;
+  }
+
+  #rate.card .card__logo {
+    margin-bottom: 40px;
+    padding: 16px;
+    height: 50px;
+    width: 50px;
+  }
+  #rate.card .card__heading,
+  #rate.card .card__text {
+    padding-bottom: 24px;
+  }
+
+  .card__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  #rate.card .card__ratings {
+    padding-bottom: 32px;
+  }
+
+  .card__ratings .rating__wrapper {
+    height: 50px;
+    width: 50px;
+  }
 }
