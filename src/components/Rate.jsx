@@ -15,7 +15,12 @@ export default function Rate(props) {
         appreciated to help us improve our offering!
       </p>
       <ul className=" card__ratings">{props.circleRating}</ul>
-      <button className="button" id="submitButton" onClick={props.showRating}>
+      <button
+        type="button"
+        className="button"
+        id="submitButton"
+        onClick={props.showRating}
+      >
         SUBMIT
       </button>
     </div>
