@@ -102,7 +102,7 @@ body {
 /* action: submit buttons */
 button,
 #submitButton {
-  color: var(--white);
+  color: var(--dark-blue);
   background-color: var(--orange);
   font-weight: 700;
   outline: none;
