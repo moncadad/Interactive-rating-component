@@ -24,9 +24,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-img {
-  max-width: 100%;
-}
+
 body {
   background-color: var(--very-dark-blue);
   color: var(--white);
@@ -100,8 +98,8 @@ body {
 }
 
 /* action: submit buttons */
-button,
-#submitButton {
+
+.submit-btn {
   color: var(--dark-blue);
   background-color: var(--orange);
   font-weight: 700;
@@ -114,12 +112,12 @@ button,
   height: 3em;
 }
 
-button:hover,
+/* button:hover,
 button:focus,
-button:active,
-#submitButton:hover,
-#submitButton:focus,
-#submitButton:active {
+button:active, */
+.submit-btn:hover,
+.submit-btn:focus,
+.submit-btn:active {
   background-color: var(--white);
   color: var(--very-dark-blue);
   cursor: pointer;
@@ -140,7 +138,7 @@ button:active,
 .response__card .card__rate--selected {
   background-color: var(--medium-grey);
   color: var(--orange);
-  padding: 0.5rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1rem;
